@@ -9,8 +9,14 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Use CORS middleware allows for requests between ports
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: 'https://frontend1-h5py.onrender.com', // Allow only your frontend domain
+  optionsSuccessStatus: 200 // For legacy browser support
+};
+
+// Use CORS middleware
+app.use(cors(corsOptions));
 app.use(express.json()); // Using built-in express.json()
 
 // Connect to MongoDB
@@ -187,3 +193,4 @@ if (require.main === module) {
 }
 
 module.exports = app;
+
