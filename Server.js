@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 // CORS configuration
 const corsOptions = {
-  origin: ['https://frontend1-h5py.onrender.com', 'http://localhost:5173'], // Allow both production and development origins
+  origin: ['https://frontend1-h5py.onrender.com'], 
   optionsSuccessStatus: 200, // For legacy browser support
 };
 
